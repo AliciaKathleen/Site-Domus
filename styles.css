@@ -37,6 +37,10 @@ body {
 }
 
 .hero {
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: calc(100vh - 4rem);
   display: flex;
   align-items: center;
@@ -52,9 +56,19 @@ body {
 }
 
 .coffee-image img {
-  width: 400px;
-  height: 400px;
+  animation: spin 40s linear infinite;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
+}
+
+@keyframes spin{
+  from {
+    transform: rotate(0deg);
+}
+  to {
+    transform: rotate(360deg); 
+}
 }
 
 .hero-text {
