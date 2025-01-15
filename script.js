@@ -1,31 +1,69 @@
-const sliderWrapper = document.querySelector('.slider-wrapper');
-const slides = document.querySelectorAll('.slide');
+class SimpleSlider {
+  constructor(selector) {
+    this.sliderWrapper = document.querySelector(selector);
+    this.slides = this.sliderWrapper.querySelectorAll(".slide");
+    this.currentIndex = 0;
+    this.slideWidth = this.slides[0].offsetWidth + 20;
+    this.initSlider();
+  }
 
-let currentIndex = 0;
-const slideWidth = slides[0].offsetWidth + 20; // Largura do slide + margem
+  initSlider() {
+    setInterval(() => this.moveSlider(), 3000);
+  }
 
-function moveSlider() {
-  currentIndex++;
-  sliderWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  moveSlider() {
+    this.currentIndex++;
+    this.sliderWrapper.style.transform = `translateX(-${
+      this.currentIndex * this.slideWidth
+    }px)`;
 
-  // Reinicia para o início suavemente quando chega no final
-  if (currentIndex >= slides.length / 2) {
-    setTimeout(() => {
-      sliderWrapper.style.transition = 'none'; // Remove a transição
-      currentIndex = 0; // Volta para o início
-      sliderWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    if (this.currentIndex >= this.slides.length / 2) {
       setTimeout(() => {
-        sliderWrapper.style.transition = 'transform 0.5s ease-in-out'; // Restaura a transição
-      });
-    }, 500); // Tempo igual ao da transição
+        this.sliderWrapper.style.transition = "none";
+        this.currentIndex = 0;
+        this.sliderWrapper.style.transform = `translateX(-${
+          this.currentIndex * this.slideWidth
+        }px)`; // Volta ao início
+        setTimeout(() => {
+          this.sliderWrapper.style.transition = "transform 0.5s ease-in-out";
+        });
+      }, 500);
+    }
   }
 }
 
-// Alterna os slides automaticamente a cada 3 segundos
-setInterval(moveSlider, 3000);
+class ImageSlider {
+  constructor(selector) {
+    this.track = document.querySelector(selector);
+    this.slides = this.track.querySelectorAll(".slider-slide");
+    this.currentIndex = 0;
+    this.slideWidth = this.slides[0].clientWidth;
+    this.initSlider();
+  }
 
+  initSlider() {
+    const firstSlideClone = this.slides[0].cloneNode(true);
+    this.track.appendChild(firstSlideClone);
 
+    setInterval(() => this.nextSlide(), 3000);
+  }
 
+  nextSlide() {
+    this.currentIndex++;
+    this.track.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+    this.track.style.transition = "transform 0.5s ease-in-out";
 
+    if (this.currentIndex >= this.slides.length) {
+      setTimeout(() => {
+        this.track.style.transition = "none";
+        this.currentIndex = 0;
+        this.track.style.transform = "translateX(0)";
+      }, 500);
+    }
+  }
+}
 
-
+document.addEventListener("DOMContentLoaded", () => {
+  new SimpleSlider(".slider-wrapper");
+  new ImageSlider(".slider-track");
+});
