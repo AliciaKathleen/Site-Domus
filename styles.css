@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #F5E6D3;
+  background-color: #FDF5EC;
   position: relative;
   min-height: 100vh;
   background-image: url(images/background.png);
@@ -112,23 +112,29 @@ body {
 
 .visit-space {
   text-align: center;
-  padding: 50px 20px;
-  background-color: #f9f4ef;
+  padding: 40px 200px;
+  background-color: #FDF5EC;
 }
 
 .visit-space h2 {
+  font-family: "Baloo Thambi 2", serif;
+  font-weight: 400;
   font-size: 2rem;
   color: #6b4a3d;
 }
 
-.visit-space p {
-  font-size: 1.2rem;
+.visit-space .phrase {
+  font-weight: 520;
+  font-family: "Balthazar", serif;
+  font-size: 2rem;
   color: #6b4a3d;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
-.description {
-  font-style: italic;
+.description-section {
+  font-size: 1.3rem;
+  font-family: "Balthazar", serif;
+  font-weight: 520;
 }
 
 .slider {
@@ -158,9 +164,199 @@ body {
 .slide img {
   width: 100%; 
   height: 100%; 
-  object-fit: cover; 
-  border-radius: 10px;
+  object-fit: cover;
+  border-radius: 15px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+  width: 50%; 
+  height: 2px; 
+  background-color: #905C2A; 
+  border: none; 
+  margin: 20px auto; 
+}
+
+.menu-wrapper {
+  background-color: #FDF5EC;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 1px auto;
+  padding: 0 10px;
+}
+
+
+.subtitle {
+  font-family: "Baloo Thambi 2", serif;
+  color: #8B4513;
+  font-size: 2rem;
+  margin: 5px;
+  font-weight: 400;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Balthazar", serif;
+  color: #8B4513;
+  font-size: 2.8rem;
+  margin: 5px 0 45px 0;
+  text-align: center;
+}
+
+.menu-section {
+  margin-bottom: 20px;
+}
+
+.menu-content {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.menu-images {
+  flex: 0 0 200px;
+  position: relative;
+  height: 370px;
+}
+
+.menu-images img {
+  width: 240px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-images img:first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.menu-images img:last-child {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.dessert-img {
+  width: 300px !important;
+  height: 350px !important;
+  position: relative !important;
+}
+
+.menu-items {
+  flex: 1;
+  padding-top: 30px;
+}
+
+h2 {
+  font-family: "Balthazar", serif;
+  color: #8B4513;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 520;
+}
+
+.menu-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: baseline;
+}
+
+.item-name {
+  font-family: "Baloo Thambi 2", serif;
+  font-size: 1.3rem;
+  white-space: nowrap;
+}
+
+.dots {
+  border-bottom: 2px dotted #4A4A4A;
+  flex: 1;
+  margin: 0 8px;
+  position: relative;
+  top: -4px;
+}
+
+.price {
+  font-family: "Baloo Thambi 2", serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  white-space: nowrap;
+}
+
+.description {
+  font-family: "Baloo Thambi 2", serif;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  margin: -8px 0 0 0;
+}
+
+
+
+
+
+@media (max-width: 900px) {
+  .container {
+      padding: 20px;
+      margin: 30px auto;
+  }
+
+  .menu-content {
+      flex-direction: column !important;
+      gap: 30px;
+  }
+
+  .menu-images {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+  }
+
+  .menu-images img {
+      position: static !important;
+      width: 100% !important;
+      max-width: 280px;
+      height: 260px !important;
+      margin: 0 10px;
+  }
+
+  .menu-items {
+      padding-top: 0;
+  }
+
+  h2 {
+      text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-images {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .menu-images img {
+      margin: 10px 0;
+  }
+
+  h1 {
+      font-size: 2.2rem;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
 }
 
 
@@ -187,6 +383,32 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .menu-images {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .menu-images img {
+      margin: 10px 0;
+  }
+
+  h1 {
+      font-size: 2.2rem;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+}
 
 @media (max-width: 768px) {
   .hero-content {
