@@ -9,12 +9,6 @@ body {
   background-color: #FDF5EC;
   position: relative;
   min-height: 100vh;
-  background-image: url(images/background.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  
 }
 
 .navbar {
@@ -479,6 +473,82 @@ h2 {
   object-fit: cover;
 }
 
+.cafe-info-wrapper {
+  font-family: "Baloo Thambi 2", serif;
+  background: #FDF5EC;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cafe-contact-box,
+.cafe-location-box {
+  font-family: "Baloo Thambi 2", serif;
+  background-color: #B4BEB4;
+  padding: 60px;
+  width: 100%;
+  max-width: 500px;
+  color: white;
+}
+
+.cafe-contact-heading,
+.cafe-location-heading {
+  font-family: "Baloo Thambi 2", serif;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.cafe-contact-list {
+  font-family: "Baloo Thambi 2", serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cafe-contact-text {
+  font-family: "Baloo Thambi 2", serif;
+  font-size: 17px;
+}
+
+.cafe-location-text {
+  font-family: "Baloo Thambi 2", serif;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.cafe-hours-wrapper {
+  font-family: "Baloo Thambi 2", serif;
+  margin-top: 20px;
+}
+
+.cafe-hours-heading {
+  font-family: "Baloo Thambi 2", serif;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.cafe-hours-list {
+  font-family: "Baloo Thambi 2", serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cafe-hours-item {
+  font-family: "Baloo Thambi 2", serif;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.cafe-hours-time {
+  color: white;
+}
 
 
 
@@ -498,9 +568,17 @@ h2 {
 
 
 
+@media (max-width: 768px) {
+  .cafe-info-wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
 
-
-
+  .cafe-contact-box,
+  .cafe-location-box {
+      width: 100%;
+  }
+}
 
 @media (max-width: 768px) {
   .team-members-grid {
