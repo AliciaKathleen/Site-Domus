@@ -37,7 +37,6 @@ body {
 }
 
 .hero {
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,6 +55,7 @@ body {
 }
 
 .coffee-image img {
+  margin-left: -50px;
   animation: spin 40s linear infinite;
   width: 500px;
   height: 500px;
@@ -76,25 +76,42 @@ body {
 }
 
 .hero-text h1 {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeIn 1.7s ease-out forwards;
   color: #5C4033;
   font-family: 'BIZ UDGothic';
-  font-size: 5rem;
+  font-size: 7rem;
   margin-bottom: 1rem;
   font-weight: 400;
 }
 
 .hero-text h2 {
-  color: #5C4033;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeIn 1.7s ease-out forwards;
+  color: #B8926D;
   font-family: "Balthazar", serif;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 300;
   margin-bottom: 1.5rem;
   max-width: 100rem;
 }
 
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(30px); 
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); 
+  }
+}
+
 .hero-text p {
   font-family: "Baloo Thambi 2", serif;
-  color: #5C4033;
+  color: #B8926D;
   font-size: 2rem;
   margin-bottom: 1.4rem;
 }
@@ -104,7 +121,7 @@ body {
   font-family: "Baloo Thambi 2", serif;
   color: white;
   border: none;
-  padding: 0.75rem 2rem;
+  padding: 0.30rem 1.5rem;
   border-radius: 50px;
   font-size: 1.7rem;
   cursor: pointer;
@@ -120,41 +137,42 @@ body {
 
 .visit-space {
   text-align: center;
-  padding: 40px 200px;
-  background-color: #FDF5EC;
+  background-color: #FDF6F0; 
 }
 
 .visit-space h2 {
+  text-align: center;
   font-family: "Baloo Thambi 2", serif;
   font-weight: 400;
   font-size: 2rem;
-  color: #6b4a3d;
+  color: #B8926D;
 }
 
 .visit-space .phrase {
   font-weight: 520;
   font-family: "Balthazar", serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #6b4a3d;
-  margin: 20px 0;
+  margin: 20px 10px;
 }
 
 .description-section {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-family: "Balthazar", serif;
   font-weight: 520;
+  color: #6b4a3d;
 }
 
 .slider {
   overflow: hidden; 
   width: 100%;
   max-width: 800px; 
-  margin: 0 auto;
+  margin: 1px auto;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 220px; 
+  height: 250px; 
 }
 
 .slider-wrapper {
@@ -178,12 +196,29 @@ body {
 }
 
 hr {
-  width: 50%; 
+  width: 40%; 
   height: 2px; 
-  background-color: #905C2A; 
+  background-color: #B8926D; 
   border: none; 
   margin: 20px auto; 
 }
+
+.icons {
+  justify-content: center;
+  display: flex; 
+  gap: 4rem; 
+}
+
+.icons-img img {
+  margin: 30px 0;
+  height: auto; 
+  transition: transform 0.8s ease-in-out;
+}
+
+.icons-img img:hover {
+  transform: rotateY(360deg);
+}
+
 
 .menu-wrapper {
   background-color: #FDF5EC;
@@ -582,17 +617,7 @@ h2 {
 
 
 
-@media (max-width: 768px) {
-  .cafe-info-wrapper {
-      flex-direction: column;
-      align-items: center;
-  }
 
-  .cafe-contact-box,
-  .cafe-location-box {
-      width: 100%;
-  }
-}
 
 @media (max-width: 768px) {
   .team-members-grid {
@@ -600,6 +625,16 @@ h2 {
       align-items: center;
       gap: 40px;
   }
+
+  .cafe-info-wrapper {
+    flex-direction: column;
+    align-items: center;
+}
+
+.cafe-contact-box,
+.cafe-location-box {
+    width: 100%;
+}
 
   .team-member {
       max-width: 200px;
@@ -673,25 +708,6 @@ h2 {
 
   h2 {
       text-align: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .menu-images {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .menu-images img {
-      margin: 10px 0;
-  }
-
-  h1 {
-      font-size: 2.2rem;
-  }
-
-  h2 {
-      font-size: 1.5rem;
   }
 }
 
