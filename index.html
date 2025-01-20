@@ -1,4 +1,5 @@
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,62 +7,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Baloo+Thambi+2:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Baloo+Thambi+2:wght@400..800&display=swap"
+        rel="stylesheet">
+
     <title>Domus</title>
 </head>
-<body>
-    <section class="homepage">
-    <nav class="navbar">
-        <a href="#" class="nav-link">home</a>
-        <a href="#" class="nav-link">cardápio</a>
-        <a href="#" class="nav-logo">DOMUS</a>
-        <a href="#" class="nav-link">sobre</a>
-        <a href="#" class="nav-link">localização</a>
-    </nav>
 
-    <main class="hero">
-        <div class="hero-content">
-            <div class="coffee-image">
-                <img src="images/img1.png" alt="Xícara de café com arte latte">
+<body>
+    <section id="home" class="homepage">
+        <nav class="navbar">
+            <a href="#home" class="nav-link">home</a>
+            <a href="#cardapio" class="nav-link">cardápio</a>
+            <a href="#sobre" class="nav-logo">DOMUS</a>
+            <a href="#sobre" class="nav-link">sobre</a>
+            <a href="#localizacao" class="nav-link">localização</a>
+        </nav>
+
+        <main class="hero">
+            <div class="hero-content">
+                <div class="coffee-image">
+                    <img src="images/img1.png" alt="Xícara de café com arte latte">
+                </div>
+                <div class="hero-text">
+                    <h1>Domus</h1>
+                    <h2>onde cada xícara, conta uma história!</h2>
+                    <p>descubra nossso sabor</p>
+                    <button class="discover-btn">descubra</button>
+                </div>
             </div>
-            <div class="hero-text">
-                <h1>Domus</h1>
-                <h2>onde cada xícara, conta uma história!</h2>
-                <p>descubra nossso sabor</p>
-                <button class="discover-btn">descubra</button>
-            </div>
-        </div>
-    </main>
-    </section>  
+        </main>
+    </section>
 
     <section class="visit-space">
         <h2>visite nosso espaço</h2>
         <p class="phrase">Combinações perfeitas para qualquer momento do seu dia!</p>
         <p class="description-section">
             Venha se deliciar com nossos cafés exclusivos, acompanhados de doces e lanches fresquinhos. <br>
-             Em cada xícara, uma experiência única de sabor e aconchego esperando por você!
+            Em cada xícara, uma experiência única de sabor e aconchego esperando por você!
         </p>
-            <section class="slider">
-                <div class="slider-wrapper">
-                    <div class="slide"><img src="images/lanche.png" alt="Imagem 1"></div>
-                    <div class="slide"><img src="images/torta-frutas.png" alt="Imagem 2"></div>
-                    <div class="slide"><img src="images/torta-frango.png" alt="Imagem 3"></div>
-                    <div class="slide"><img src="images/copos-frutas.png" alt="Imagem 1"></div>
-                    <div class="slide"><img src="images/drink-morango.png" alt="Imagem 2"></div>
-                    <div class="slide"><img src="images/torta-chocolate.png" alt="Imagem 3"></div>
-                </div>
-            </section>
-            <hr class="line">
-            <section class="icons">
-                <div class="icons-img"> <img src="images/cake.png" alt=""></div>
-                <div class="icons-img"> <img src="images/milkshake.png" alt=""></div>
-                <div class="icons-img"> <img src="images/coffee.png" alt=""></div>
-                <div class="icons-img"> <img src="images/.png" alt=""></div>
-                <div class="icons-img"> <img src="images/cookie.png" alt=""></div>
-            </section>
+        <section class="slider">
+            <div class="slider-wrapper">
+                <div class="slide"><img src="images/lanche.png" alt="Imagem 1"></div>
+                <div class="slide"><img src="images/torta-frutas.png" alt="Imagem 2"></div>
+                <div class="slide"><img src="images/torta-frango.png" alt="Imagem 3"></div>
+                <div class="slide"><img src="images/copos-frutas.png" alt="Imagem 1"></div>
+                <div class="slide"><img src="images/drink-morango.png" alt="Imagem 2"></div>
+                <div class="slide"><img src="images/torta-chocolate.png" alt="Imagem 3"></div>
+            </div>
+        </section>
+        <hr class="line">
+        <section class="icons">
+            <div class="icons-img"> <img src="images/cake.png" alt=""></div>
+            <div class="icons-img"> <img src="images/milkshake.png" alt=""></div>
+            <div class="icons-img"> <img src="images/coffee.png" alt=""></div>
+            <div class="icons-img"> <img src="images/cookie.png" alt=""></div>
+        </section>
     </section>
 
-    <section class="menu-wrapper">
+    <section id="cardapio" class="menu-wrapper">
         <div class="container">
             <header>
                 <p class="subtitle">explore nossos sabores</p>
@@ -127,7 +130,7 @@
                             <p class="description">Delicioso Brownie caseiro com casquinha!</p>
                         </div>
                         <div class="menu-item">
-                            <span class="item-name">Bolo de Cenoura c/ cobertura de chocolate</span>
+                            <span class="item-name">Bolo de Cenoura</span>
                             <span class="dots"></span>
                             <span class="price">R$21,90</span>
                             <p class="description">Bolo de cenoura caseiro com deliciosa cobertura de chocolate.</p>
@@ -136,13 +139,8 @@
                             <span class="item-name">Palha Italiana</span>
                             <span class="dots"></span>
                             <span class="price">R$16,90</span>
-                            <p class="description">Uma deliciosa combinação de biscoito crocante e brigadeiro cremoso, perfeita para adoçar qualquer momento!</p>
-                        </div>
-                        <div class="menu-item">
-                            <span class="item-name">Bombom Aberto</span>
-                            <span class="dots"></span>
-                            <span class="price">R$11,90</span>
-                            <p class="description">Delicioso creme de Ninho, acompanhado de uvas e uma saborosa ganache de chocolate.</p>
+                            <p class="description">Uma deliciosa combinação de biscoito crocante e brigadeiro cremoso,
+                                perfeita para adoçar qualquer momento!</p>
                         </div>
                     </div>
                     <div class="menu-images">
@@ -163,13 +161,15 @@
                             <span class="item-name">Pão na chapa com ovo</span>
                             <span class="dots"></span>
                             <span class="price">R$6,90</span>
-                            <p class="description">Uma clássica combinação de pão na chapa douradinho com ovo no ponto perfeito, simples e irresistível!</p>
+                            <p class="description">Uma clássica combinação de pão na chapa douradinho com ovo no ponto
+                                perfeito, simples e irresistível!</p>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Misto Quente</span>
                             <span class="dots"></span>
                             <span class="price">R$9,90</span>
-                            <p class="description">Um clássico irresistível: pão quentinho recheado com queijo derretido e presunto, perfeito para qualquer hora do dia!</p>
+                            <p class="description">Um clássico irresistível: pão quentinho recheado com queijo derretido
+                                e presunto, perfeito para qualquer hora do dia!</p>
                         </div>
                         <div class="menu-item">
                             <span class="item-name">Misto Quente com ovo</span>
@@ -193,15 +193,15 @@
                 </div>
                 <div class="button-container">
                     <button class="button-menu">
-                        menu completo <i class='bx bx-up-arrow-alt' ></i>
+                        menu completo <i class='bx bx-up-arrow-alt'></i>
                     </button>
                 </div>
-                
+
             </section>
         </div>
     </section>
-    
-    <section class="history-section">
+
+    <section id="sobre" class="history-section">
         <div class="container-section">
             <div class="image-container">
                 <img src="images/parede.jpg">
@@ -210,13 +210,17 @@
                 <div class="text-content">
                     <span class="subtitle-history">COMO COMEÇAMOS</span>
                     <h2 class="phrase-history">Nossa História</h2>
-                    <p>A Domus é muito mais do que um café; é uma missão inspirada por Deus. Nosso nome, que em latim significa 'morada', reflete o que desejamos para todos que nos visitam: que se sintam acolhidos, como se estivessem em casa.</p>
-                    <p>Aqui, cada detalhe é pensado com amor, e nossas delícias são preparadas para aquecer o coração e proporcionar momentos únicos. Somos uma comunidade católica missionária, unida pela fé e pelo propósito de levar alegria e conforto a todos que cruzam nossa porta.</p>
+                    <p>A Domus é muito mais do que um café; é uma missão inspirada por Deus. Nosso nome, que em latim
+                        significa 'morada', reflete o que desejamos para todos que nos visitam: que se sintam acolhidos,
+                        como se estivessem em casa.</p>
+                    <p>Aqui, cada detalhe é pensado com amor, e nossas delícias são preparadas para aquecer o coração e
+                        proporcionar momentos únicos. Somos uma comunidade católica missionária, unida pela fé e pelo
+                        propósito de levar alegria e conforto a todos que cruzam nossa porta.</p>
                 </div>
                 <div class="features">
                     <div class="feature-item">
                         <i class="fa-regular fa-star"></i>
-                        <span>Ingredientes especiais, selecionados com carinho para você</span>
+                        <span>Ingredientes especiais</span>
                     </div>
                     <div class="feature-item">
                         <i class="fa-solid fa-mug-hot"></i>
@@ -230,67 +234,68 @@
             </div>
         </div>
     </section>
-    
-    <section class="team-section">
+
+    <section id="localizacao" class="team-section">
         <div class="team-container">
             <h2 class="team-title">Nossa Equipe</h2>
             <div class="team-members-grid">
                 <div class="team-member">
                     <div class="team-member-image">
-                        <img class="team-member-photo" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" alt="Team member 1">
+                        <img class="team-member-photo"
+                            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" alt="Team member 1">
                     </div>
                     <p class="team-member-name">Lorem Ipsum</p>
                 </div>
                 <div class="team-member">
                     <div class="team-member-image">
-                        <img class="team-member-photo" src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c" alt="Team member 2">
+                        <img class="team-member-photo"
+                            src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c" alt="Team member 2">
                     </div>
                     <p class="team-member-name">Lorem Ipsum</p>
                 </div>
                 <div class="team-member">
                     <div class="team-member-image">
-                        <img class="team-member-photo" src="https://images.unsplash.com/photo-1541614101331-1a5a3a194e92" alt="Team member 3">
+                        <img class="team-member-photo"
+                            src="https://images.unsplash.com/photo-1541614101331-1a5a3a194e92" alt="Team member 3">
                     </div>
                     <p class="team-member-name">Lorem Ipsum</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section class="slider-section">
         <div class="slides-wrapper">
             <div class="slider-track">
                 <div class="slider-slide">
-                    <img src="images/torta-frutas.png" alt="Coffee Shop 1" class="slider-image">
+                    <img src="images/barman-slide.jpg" alt="Coffee Shop 1" class="slider-image">
                 </div>
                 <div class="slider-slide">
-                    <img src="images/lousa.jpg" alt="Coffee Shop 2" class="slider-image">
+                    <img src="images/brownie-slide.jpg" alt="Coffee Shop 2" class="slider-image">
                 </div>
                 <div class="slider-slide">
-                    <img src="images/torta-chocolate.png" alt="Coffee Shop 3" class="slider-image">
+                    <img src="images/coffee-slide.jpg" alt="Coffee Shop 3" class="slider-image">
                 </div>
-                <div class="slider-slide">
-                    <img src="images/pão-de-queijo.png" alt="Coffee Shop 3" class="slider-image">
-                </div>
+                
             </div>
         </div>
     </section>
-    
+
     <div class="cafe-info-wrapper">
     <section class="cafe-contact-box">
             <h2 class="cafe-contact-heading">CONTATO</h2>
             <div class="cafe-contact-list">
-                <p class="cafe-contact-text">TELEFONE:</p>
-                <p class="cafe-contact-text">INSTAGRAM:</p>
-                <p class="cafe-contact-text">E-MAIL:</p>
+                <p class="cafe-contact-text">TELEFONE: (31)9773-1235</p>
+                <p class="cafe-contact-text">INSTAGRAM: @Domusocafeoficial</p>
+                <p class="cafe-contact-text">E-MAIL:cafedomus@gmail.com</p>
             </div>
     </section>
 
-        <section class="cafe-location-box">
+    <section class="cafe-location-box">
             <h2 class="cafe-location-heading">LOCALIZAÇÃO</h2>
-            <p class="cafe-location-text">Northern End Of The Oversea Passenger 329</p>
-            <p class="cafe-location-text">Queensberry Street, North Melbourne/VIC 3051</p>
-            
+            <p class="cafe-location-text">Rua Monsenhor Messías, 94</p>
+            <p class="cafe-location-text">Centro, Sete Lagoas</p>
+
             <div class="cafe-hours-wrapper">
                 <h3 class="cafe-hours-heading">FUNCIONAMENTO</h3>
                 <div class="cafe-hours-list">
@@ -298,7 +303,9 @@
                     <p class="cafe-hours-item">SÁB E DOM <span class="cafe-hours-time">9H - 13H</span></p>
                 </div>
             </div>
-        </section>
-    <script src="script.js" defer></script>
+    </section>
+
+<script src="script.js" defer></script>
 </body>
+
 </html>
