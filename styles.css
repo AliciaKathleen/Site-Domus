@@ -23,7 +23,6 @@ section.visible {
   transform: translateY(0);
 }
 
-
 .navbar {
   background-color: #8B9B8B;
   padding: 1rem;
@@ -50,6 +49,7 @@ section.visible {
 }
 
 .hero {
+  background-image: url(images/bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
