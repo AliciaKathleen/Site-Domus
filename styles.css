@@ -50,6 +50,7 @@ section.visible {
 
 .hero {
   background-image: url(images/bg.png);
+  background-position: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -348,7 +349,7 @@ h2 {
 .description {
   font-family: "Baloo Thambi 2", serif;
   width: 100%;
-  color: #666;
+  color: #5C4033;
   font-size: 1.2rem;
   margin: -2px 0 2px 0;
 }
@@ -534,89 +535,151 @@ h2 {
   object-fit: cover;
 }
 
-.cafe-info-wrapper {
-  font-family: "Baloo Thambi 2", serif;
-  background: #FDF5EC;
+.cafe-contact-box,
+.contact-container,
+iframe{
+  margin-left: 2rem;
+  max-width: 85%;
+  border-radius: 5%;
+}
+
+.cafe-contact-box {
   display: flex;
   justify-content: center;
-  gap: 5rem;
-  padding: 40px;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.cafe-contact-box,
-.cafe-location-box {
-  font-family: "Baloo Thambi 2", serif;
-  background-color: #8B9B8B;
-  padding: 80px;
-  width: 100%;
-  max-width: 500px;
-  color: white;
+.infos {
+  padding: 20px;
 }
 
-.cafe-contact-heading,
-.cafe-location-heading {
-  font-family: "Baloo Thambi 2", serif;
-  text-align: center;
+.infos h1 {
+  font-family: "Balthazar", serif;
   font-size: 3rem;
+  margin-top: -2rem;
+  margin-bottom: -.2rem;
+  color: #8B4513;
+}
+
+.infos h2 {
+  font-family: "Baloo Thambi 2", serif;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #8B4513;
+}
+
+.infos p {
+  font-family: "Baloo Thambi 2", serif;
+  font-size: 1.2rem;
+  margin: 8px 0;
+  color: #B68973;
+  line-height: 1.5;
+}
+
+.footer {
+  background-color: #82917F;
   color: white;
-  margin-bottom: 20px;
+  padding: 2rem 0;
+  width: 100%;
 }
 
-.cafe-contact-list {
-  font-family: "Baloo Thambi 2", serif;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.cafe-contact-text {
-  font-family: "Baloo Thambi 2", serif;
-  font-size: 1.5rem;
-}
-
-.cafe-location-text {
-  font-family: "Baloo Thambi 2", serif;
-  font-size: 1.5rem;
-  line-height: 1.4;
-}
-
-.cafe-hours-wrapper {
-  font-family: "Baloo Thambi 2", serif;
-  margin-top: 20px;
-}
-
-.cafe-hours-heading {
-  font-family: "Baloo Thambi 2", serif;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.cafe-hours-list {
-  font-family: "Baloo Thambi 2", serif;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.cafe-hours-item {
-  font-family: "Baloo Thambi 2", serif;
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  font-size: 1.5rem;
+  padding: 0 2rem;
 }
 
-.cafe-hours-time {
+.footer-section p{
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #FDF5EC;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.footer-section ul {
+  font-size: 1.1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
   color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+.footer-section a:hover {
+  color: #e0e0e0;
+}
 
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
 
+@media (max-width: 768px) {
+  .cafe-contact-box {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+  }
 
+  .map-container iframe {
+      width: 100%;
+      height: 350px;
+  }
 
-/* Large Screens (Desktops) - 1200px and below */
+  .infos {
+      width: 100%;
+      text-align: center;
+  }
+
+  .infos h1{
+    margin-top: 2rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-section {
+    margin: 1rem 0;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 1200px) {
   .navbar {
     gap: 3rem;
@@ -660,7 +723,6 @@ h2 {
   }
 }
 
-/* Medium Screens (Tablets) - 768px to 1199px */
 @media (max-width: 1199px) {
   .navbar {
     gap: 2rem;
@@ -782,13 +844,12 @@ h2 {
     gap: 30px;
   }
 }
-
-/* Small Screens (Mobile) - 767px and below */
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   .navbar {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
+    text-align: center;
   }
 
   .nav-link {
@@ -796,24 +857,27 @@ h2 {
   }
 
   .nav-logo {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .hero-content {
-    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
   }
 
   .coffee-image img {
     width: 250px;
     height: 250px;
+    margin-left: 0;
   }
 
   .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .hero-text h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hero-text p {
@@ -821,11 +885,11 @@ h2 {
   }
 
   .visit-space h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .visit-space .phrase {
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding: 0 15px;
   }
 
@@ -835,186 +899,194 @@ h2 {
   }
 
   .slider {
-    max-width: 100%;
-    height: 180px;
-    padding: 0 15px;
-  }
-
-  .slide {
-    height: 8rem;
+    height: 150px;
   }
 
   .icons {
-    gap: 1.5rem;
-    padding: 0 15px;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
   }
 
   .icons-img img {
     width: 50px;
   }
 
-  .menu-wrapper {
-    padding: 0 15px;
-  }
-
-  .subtitle {
-    font-size: 1.6rem;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-    margin-bottom: 30px;
-  }
-
-  .menu-images img {
-    width: 240px !important;
-    height: 280px !important;
-  }
-
-  .dessert-img {
-    width: 280px !important;
-    height: 330px !important;
-  }
-
-  .menu-items {
-    padding: 0 10px;
-  }
-
-  .menu-item {
+  .menu-content {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 5px;
+    gap: 2rem;
   }
 
-  .item-name {
-    font-size: 1.2rem;
+  .menu-images {
+    position: static;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
-  .dots {
-    display: none;
+  .menu-images img {
+    position: static !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    height: auto !important;
+    margin: 0 !important;
   }
 
-  .price {
+  .menu-items {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .item-name, .price {
     font-size: 1.2rem;
   }
 
   .description {
-    text-align: center;
-    margin-top: 5px;
+    font-size: 1rem;
   }
 
-  .history-section {
-    padding: 40px 0;
-  }
-
-  .phrase-history {
-    font-size: 2rem;
-  }
-
-  .text-content p {
-    font-size: 1.1rem;
-  }
-
-  .feature-item {
+  .container-section {
     flex-direction: column;
     text-align: center;
-    gap: 5px;
+    gap: 2rem;
   }
 
-  .feature-item i {
-    font-size: 2rem;
-  }
-
-  .feature-item span {
-    font-size: 1.1rem;
-  }
-
-  .team-section {
-    padding: 40px 0;
-  }
-
-  .team-title {
-    font-size: 2rem;
-    margin-bottom: 40px;
+  .image-container {
+    width: 100%;
+    padding: 0 15px;
   }
 
   .team-members-grid {
-    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
 
-  .team-member-image {
-    width: 150px;
-    height: 150px;
+  .team-member {
+    width: 100%;
+    max-width: 200px;
   }
 
-  .team-member-name {
-    font-size: 1.3rem;
+  .cafe-contact-box {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
   }
 
-  .slider-section {
-    height: 200px;
+  .contact-container,
+  iframe {
+    width: 100%;
+    margin: 0;
+    border-radius: 10px;
   }
 
-  .slides-wrapper {
-    height: 200px;
+  .infos {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
   }
 
-  .slider-slide {
-    height: 200px;
-  }
-
-  .cafe-contact-box,
-  .cafe-location-box {
-    padding: 30px 20px;
-  }
-
-  .cafe-contact-heading,
-  .cafe-location-heading {
-    font-size: 1.6rem;
-  }
-
-  .cafe-contact-text,
-  .cafe-location-text {
-    font-size: 1.1rem;
-  }
-
-  .cafe-hours-heading {
-    font-size: 1.3rem;
-  }
-
-  .cafe-hours-item {
-    font-size: 1.1rem;
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
   }
 }
 
-/* Extra Small Screens (Small Mobile) - 480px and below */
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 3rem;
+@media (min-width: 481px) and (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
   }
 
-  .hero-text h2 {
-    font-size: 1.8rem;
+  .nav-logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
   }
 
   .coffee-image img {
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 350px;
+    margin-left: 0;
   }
 
-  .menu-images img {
-    width: 200px !important;
-    height: 240px !important;
+  .menu-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
   }
 
-  .dessert-img {
-    width: 240px !important;
-    height: 280px !important;
+  .menu-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    position: static;
+    height: auto;
   }
 
-  .team-member-image {
-    width: 120px;
-    height: 120px;
+  .team-members-grid {
+    flex-wrap: wrap;
+    gap: 3rem;
   }
+
+  .team-member {
+    flex: 0 0 calc(50% - 2rem);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-content {
+    gap: 3rem;
+    padding: 0 2rem;
+  }
+
+  .coffee-image img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .menu-content {
+    gap: 3rem;
+  }
+
+  .container-section {
+    padding: 0 2rem;
+    gap: 3rem;
+  }
+}
+
+* {
+  transition: all 0.3s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.discover-btn,
+.button-menu {
+  min-height: 44px;
+  padding: 0.5rem 1.5rem;
 }

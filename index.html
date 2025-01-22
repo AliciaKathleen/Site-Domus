@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Baloo+Thambi+2:wght@400..800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <title>Domus</title>
 </head>
@@ -32,7 +33,9 @@
                     <h1>Domus</h1>
                     <h2>onde cada xícara, conta uma história!</h2>
                     <p>descubra nossso sabor</p>
-                    <button class="discover-btn">descubra</button>
+                    <a href="#cardapio" class="discover-btn">
+                        <button>Descubra</button>
+                    </a>
                 </div>
             </div>
         </main>
@@ -241,24 +244,23 @@
             <div class="team-members-grid">
                 <div class="team-member">
                     <div class="team-member-image">
-                        <img class="team-member-photo"
-                            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" alt="Team member 1">
+                        <img class="team-member-photo" src="images/colaborador01.jpg" alt="">
                     </div>
-                    <p class="team-member-name">Lorem Ipsum</p>
                 </div>
                 <div class="team-member">
                     <div class="team-member-image">
-                        <img class="team-member-photo"
-                            src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c" alt="Team member 2">
+                        <img class="team-member-photo" src="images/colaborador02.jpg" alt="">
                     </div>
-                    <p class="team-member-name">Lorem Ipsum</p>
                 </div>
                 <div class="team-member">
                     <div class="team-member-image">
-                        <img class="team-member-photo"
-                            src="https://images.unsplash.com/photo-1541614101331-1a5a3a194e92" alt="Team member 3">
+                        <img class="team-member-photo" src="images/colaborador03.jpg" alt="">
                     </div>
-                    <p class="team-member-name">Lorem Ipsum</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-member-image">
+                        <img class="team-member-photo" src="images/colaborador04.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -268,43 +270,60 @@
         <div class="slides-wrapper">
             <div class="slider-track">
                 <div class="slider-slide">
-                    <img src="images/barman-slide.jpg" alt="Coffee Shop 1" class="slider-image">
-                </div>
-                <div class="slider-slide">
-                    <img src="images/brownie-slide.jpg" alt="Coffee Shop 2" class="slider-image">
-                </div>
-                <div class="slider-slide">
-                    <img src="images/coffee-slide.jpg" alt="Coffee Shop 3" class="slider-image">
+                    <img src="images/coffee-slide.jpg" alt="Coffee Shop 1" class="slider-image">
                 </div>
                 
             </div>
         </div>
     </section>
 
-    <div class="cafe-info-wrapper">
     <section class="cafe-contact-box">
-            <h2 class="cafe-contact-heading">CONTATO</h2>
-            <div class="cafe-contact-list">
-                <p class="cafe-contact-text">TELEFONE: (31)9773-1235</p>
-                <p class="cafe-contact-text">INSTAGRAM: @Domusocafeoficial</p>
-                <p class="cafe-contact-text">E-MAIL:cafedomus@gmail.com</p>
-            </div>
+        <div class="contact-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.8331467624175!2d-44.249069623951655!3d-19.462759381823037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa65b5dd3260ef3%3A0x104cfb4f667402e1!2sDomus%20Caf%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1737504799318!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="infos">
+            <h1>Passa lá em casa!</h1>
+            <h2>Localização:</h2>
+            <p>R. Monsenhor Messías, 94 - Sete Lagoas</p>
+            <h2>Funcionamento:</h2>
+            <p>Terça-Feira a Sexta-Feira: 11:00 às 20:00</p>
+            <p>Sábado: 09:00 às 14:00</p>
+            <p>Domingo: 08:00 às 12:00</p>
+            <p>Segunda-Feira: Fechado</p>
+        </div>
     </section>
 
-    <section class="cafe-location-box">
-            <h2 class="cafe-location-heading">LOCALIZAÇÃO</h2>
-            <p class="cafe-location-text">Rua Monsenhor Messías, 94</p>
-            <p class="cafe-location-text">Centro, Sete Lagoas</p>
-
-            <div class="cafe-hours-wrapper">
-                <h3 class="cafe-hours-heading">FUNCIONAMENTO</h3>
-                <div class="cafe-hours-list">
-                    <p class="cafe-hours-item">TER - SÁB <span class="cafe-hours-time">11H - 20H</span></p>
-                    <p class="cafe-hours-item">SÁB E DOM <span class="cafe-hours-time">9H - 13H</span></p>
-                </div>
+    <section class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+              <h2 class="logo">DOMUS</h2>
             </div>
+            
+            <div class="footer-section">
+              <h3>Contato</h3>
+              <p><a href="mailto:xxxxx@gmail.com">cafedomuss@gmail.com</a></p>
+              <p>Telefone: (31) 9773-1235</p>
+              <p>Endereço: Rua Monsenhor Messias, 97 - Centro, Sete Lagoas</p>
+            </div>
+            
+            <div class="footer-section">
+              <h3>Informações</h3>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#localizacao">Localização</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2024 DOMUS. Todos os direitos reservados.</p>
+          </div>
     </section>
+   
 
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="script.js" defer></script>
 </body>
 
