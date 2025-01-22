@@ -148,7 +148,7 @@ section.visible {
 
 .visit-space {
   text-align: center;
-  background-color: #FDF6F0; 
+  background-color: #FDF5EC; 
 }
 
 .visit-space h2 {
@@ -323,6 +323,7 @@ h2 {
 }
 
 .item-name {
+  color: #5C4033;
   font-family: "Baloo Thambi 2", serif;
   font-size: 1.5rem;
   white-space: nowrap;
@@ -337,6 +338,7 @@ h2 {
 }
 
 .price {
+  color: #5C4033;
   font-family: "Baloo Thambi 2", serif;
   font-weight: 500;
   font-size: 1.5rem;
@@ -352,7 +354,9 @@ h2 {
 }
 
 .button-container{
-  display: flex;           
+  display: flex;    
+  margin-top: 2rem;   
+  margin-bottom: 2rem;     
   justify-content: center;  
   align-items: center;      
 }
@@ -486,6 +490,12 @@ h2 {
   margin: 0 auto 20px;
   border-radius: 50%;
   overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.team-member-image:hover{
+  transform: scale(1.2);
 }
 
 .team-member-photo {
@@ -493,6 +503,7 @@ h2 {
   height: 100%;
   object-fit: cover;
 }
+
 
 .team-member-name {
   font-family: "Balthazar", serif;
@@ -560,6 +571,7 @@ iframe{
   margin-top: -2rem;
   margin-bottom: -.2rem;
   color: #8B4513;
+  white-space: nowrap;
 }
 
 .infos h2 {
@@ -741,6 +753,7 @@ iframe{
   }
 
   .coffee-image img {
+    width: 100%;
     width: 350px;
     height: 350px;
     margin-left: 0;
@@ -864,6 +877,7 @@ iframe{
   }
 
   .coffee-image img {
+    width: 100%;
     width: 250px;
     height: 250px;
     margin-left: 0;
@@ -1015,6 +1029,7 @@ iframe{
   }
 
   .coffee-image img {
+    width: 100%;
     width: 350px;
     height: 350px;
     margin-left: 0;
@@ -1053,6 +1068,7 @@ iframe{
   }
 
   .coffee-image img {
+    width: 100%;
     width: 400px;
     height: 400px;
   }
@@ -1069,21 +1085,4 @@ iframe{
 
 * {
   transition: all 0.3s ease-in-out;
-}
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
-.discover-btn,
-.button-menu {
-  min-height: 44px;
-  padding: 0.5rem 1.5rem;
 }

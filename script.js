@@ -72,3 +72,16 @@ document.querySelectorAll('.nav-link, .nav-logo').forEach(anchor => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+
+  const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(event) { event.preventDefault();
+      const targetSection = link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetSection);
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+      history.pushState(null, null, '#' + targetSection);
+    });
+  });
+});
