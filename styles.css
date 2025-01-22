@@ -130,7 +130,7 @@ section.visible {
   margin-bottom: 1.4rem;
 }
 
-.discover-btn {
+.discover-btn button{
   background-color: #8B9B8B;
   font-family: "Baloo Thambi 2", serif;
   color: white;
@@ -145,9 +145,6 @@ section.visible {
   transition: ease .5s;
 }
 
-.discover-btn:hover {
-  background-color: #4E685B;
-}
 
 .visit-space {
   text-align: center;
